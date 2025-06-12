@@ -90,14 +90,36 @@ public class SpringBootDemoHelloworldApplication {
 	 * @param who 参数，非必须
 	 * @return Hello, ${who}
 	 */
-	@GetMapping("/hello")
-	public String sayHello(@RequestParam(required = false, name = "who") String who) {
-		if (StrUtil.isBlank(who)) {
-			who = "World";
-		}
-		return StrUtil.format("Hello, {}!", who);
-	}
-}
+         @GetMapping("/hello")
+         public String sayHello(@RequestParam(required = false, name = "who") String who) {
+                 if (StrUtil.isBlank(who)) {
+                         who = "World";
+                 }
+                 return StrUtil.format("Hello, {}!", who);
+         }
+
+         /**
+          * Goodbye，World
+          *
+          * @param who 参数，非必须
+          * @return Goodbye, ${who}
+          */
+         @GetMapping("/goodbye")
+         public String sayGoodbye(@RequestParam(required = false, name = "who") String who) {
+                 if (StrUtil.isBlank(who)) {
+                         who = "World";
+                 }
+                 return StrUtil.format("Goodbye, {}!", who);
+         }
+
+         /**
+          * 获取当前服务器时间
+          */
+         @GetMapping("/time")
+         public String currentTime() {
+                 return LocalDateTime.now().toString();
+         }
+  }
 ```
 
 ### application.yml

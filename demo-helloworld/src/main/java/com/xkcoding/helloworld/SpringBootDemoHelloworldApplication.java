@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
 /**
  * <p>
  * SpringBoot启动类
@@ -35,5 +37,29 @@ public class SpringBootDemoHelloworldApplication {
             who = "World";
         }
         return StrUtil.format("Hello, {}!", who);
+    }
+
+    /**
+     * Goodbye endpoint
+     *
+     * @param who optional name
+     * @return Goodbye message
+     */
+    @GetMapping("/goodbye")
+    public String sayGoodbye(@RequestParam(required = false, name = "who") String who) {
+        if (StrUtil.isBlank(who)) {
+            who = "World";
+        }
+        return StrUtil.format("Goodbye, {}!", who);
+    }
+
+    /**
+     * Get current server time.
+     *
+     * @return current time in ISO format
+     */
+    @GetMapping("/time")
+    public String currentTime() {
+        return LocalDateTime.now().toString();
     }
 }
