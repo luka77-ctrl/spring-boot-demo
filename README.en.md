@@ -124,7 +124,7 @@ View the [TODO](./TODO.en.md) file
 | [demo-multi-datasource-jpa](./demo-multi-datasource-jpa)     | a demo to implement JPA multi-datasource.                    |
 | [demo-multi-datasource-mybatis](./demo-multi-datasource-mybatis) | a demo to implement Mybatis multi-datasource by using an open source solution from Mybatis-Plus. |
 | [demo-sharding-jdbc](./demo-sharding-jdbc)                   | a demo to use `sharding-jdbc` to implement sub-database and sub-tables, while ORM uses Mybatis-Plus. |
-| [demo-tio](./demo-tio)                                       | <span style="color:pink;">NOT FINISHED YET!</span> <br />a demo to integrate t-io(a network programming framework like netty). |
+| [demo-tio](./demo-tio)                                       | Finished <br />a demo to integrate t-io(a network programming framework like netty). |
 | demo-grpc                                                    | <span style="color:pink;">NOT FINISHED YET!</span> <br />a demo to integrate Google grpc, need to be configure tls/ssl, see [ISSUE#5](https://github.com/xkcoding/spring-boot-demo/issues/5). |
 | [demo-codegen](./demo-codegen)                               | a demo to integrate velocity template engine to implement code generator, improve development efficiency. |
 | [demo-graylog](./demo-graylog)                               | a demo to integrate graylog for unified log collection.      |
